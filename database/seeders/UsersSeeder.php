@@ -17,7 +17,7 @@ class UsersSeeder extends Seeder
             [
                 'name' => 'Siriwan Sintun',
                 'email' => 'siriwansintun2545@gmail.com',
-                'password' => Hash::make('123456'),
+                'password' => bcrypt('123456'),
                 'address' => 'Nakhon Si Thammarat',
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),

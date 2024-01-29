@@ -29,9 +29,9 @@ class ProductController extends Controller
     public function store(Request $request)
     {
         Product::create([
-            'product_name' => $request->pd_name,
-            'product_type' => $request->pd_type,
-            'price' => $request->pd_price,
+            'product_name' => $request->product_name,
+            'product_type' => $request->product_type,
+            'price' => $request->price,
         ]);
         $result = ['name' => 'store', 'payload' => $request->all()];
         return $result;
@@ -61,9 +61,9 @@ class ProductController extends Controller
 
         // Update multiple fields
         $product->update([
-            'product_name' => $request->pd_name,
-            'product_type' => $request->pd_type,
-            'price' => $request->pd_price,
+            'product_name' => $request->product_name,
+            'product_type' => $request->product_type,
+            'price' => $request->price,
         ]);
 
         if ($product) {
